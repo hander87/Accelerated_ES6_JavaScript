@@ -1,3 +1,27 @@
+// OBJECT LITERALS
+// Takes values from surrounding values
+let name1 = 'Hannes';
+let age1 = 31;
+
+// Assigning property names
+let assignKey = 'The Key'
+
+let obj = {
+    name1: 'Emma',
+    age1,
+    [assignKey]: 1,
+    greet() {
+        console.log('Hello ' + name1)
+    },
+    "greet me"() {
+        console.log('Hello ' + 'You')
+    }
+}
+obj.greet();
+obj["greet me"]();
+console.log('Object literals:', obj, obj[assignKey])
+
+
 // DEFAULT VALUES
 function isEqualTo(number = 10, compare = number) {
     console.log('number', number);
@@ -5,6 +29,7 @@ function isEqualTo(number = 10, compare = number) {
     return number == compare;
 }
 console.log( 'Compare fn:', isEqualTo() );
+
 
 // ARROW FUNCTION AND "THIS"
 // Arrow Function keeps it's original context
@@ -21,6 +46,7 @@ function tradFunc() {
 BUTTON1.addEventListener('click', tradFunc);
 BUTTON2.addEventListener('click', arrFunc);
 
+
 // ARROW FUNCTION
 function standardFunction(a) {
     return a + 5;
@@ -32,6 +58,7 @@ console.log('Arrow function:', arrowFunction(5))
 
 // Can also use inside other functions
 setTimeout( () => console.log('Hello from timeout fn!'), 1000 )
+
 
 // HOISTNING
 // Declare before use
@@ -55,6 +82,7 @@ const OBJ = {
 console.log(OBJ)
 OBJ.age = 27
 console.log(OBJ)
+
 
 // LET
 // Let allows "Block Scoping"
