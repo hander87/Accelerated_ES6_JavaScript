@@ -1,3 +1,13 @@
+// FOR OF LOOP
+// New in ES6
+// Shorter way of looping
+let testResults = [1.12, 23.3, 2.24];
+
+for( let result of testResults ) {
+    console.log('FOR OF LOOP', result);
+}
+
+
 // SPREAD OPERATOR
 // "Max" function expects lists of numbers - not an array
 // Spread operator splits up array into a list
