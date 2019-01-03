@@ -1,3 +1,18 @@
+// ARROW FUNCTION AND "THIS"
+// Arrow Function keeps it's original context
+// Traditional functions assigns it to whatever calls it, ie: button-elements
+const BUTTON1 = document.querySelector('button');
+const BUTTON2 = document.querySelector('#btn2');
+
+var arrFunc = () => console.log('arrFunc', this);
+
+function tradFunc() {
+    console.log('tradFunc', this);
+}
+
+BUTTON1.addEventListener('click', tradFunc);
+BUTTON2.addEventListener('click', arrFunc);
+
 // ARROW FUNCTION
 function standardFunction(a) {
     return a + 5;
