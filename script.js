@@ -1,3 +1,15 @@
+// TEMPLATE LITERALS
+// Using Backticks
+let name2 = 'Hannes';
+
+let desc = `
+Hello! I'm ${name2 + '!!!!'},
+Can also be escaped like so: \${name2 + '!!!!'},
+Goodbye
+`;
+console.log('TEMPLATE LITERALS', desc);
+
+
 // FOR OF LOOP
 // New in ES6
 // Shorter way of looping
