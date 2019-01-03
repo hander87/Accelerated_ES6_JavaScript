@@ -1,3 +1,14 @@
+// SPREAD OPERATOR
+// "Max" function expects lists of numbers - not an array
+// Spread operator splits up array into a list
+let numbers = [ 1,2,3,4,5 ];
+console.log( 'numbers', numbers )
+console.log( '...numbers', ...numbers )
+
+console.log('Math.max(...numbers)', Math.max(...numbers));
+console.log('Math.max(numbers)', Math.max(numbers));
+
+
 // REST OPERATOR
 // Solves issue of using unknown number of values
 // "..." = Rest operator
