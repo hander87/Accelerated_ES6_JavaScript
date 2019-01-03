@@ -1,3 +1,14 @@
+// HOISTNING
+// Declare before use
+function setValue () {
+    theAge = 31
+}; 
+let theAge;
+setValue();
+console.log('Hoist', theAge)
+
+
+// CONST
 const AGE = 31; // CONST only assigned once
 // AGE = 27; 
 console.log(AGE);
@@ -10,12 +21,13 @@ console.log(OBJ)
 OBJ.age = 27
 console.log(OBJ)
 
+// LET
 // Let allows "Block Scoping"
 
-// let age = 31;
-// if (true) {
-//     let age = 27;
-//     console.log('Inside', age);
-// }
+let age = 31;
+if (true) {
+    let age = 27;
+    console.log('Inside', age);
+}
 
-// console.log('Outside', age);
+console.log('Outside', age);
