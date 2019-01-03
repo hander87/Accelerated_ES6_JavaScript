@@ -1,3 +1,27 @@
+// DESTRUCTURING OBJECTS
+// Same tricks are valid for DESTRUCTURING ARRAYS
+let obj2 = {
+    name3: 'Hannes',
+    age3: 31,
+    greet2: function() {
+        console.log('Hellooo Obj!');
+    }
+};
+let {name3, age3} = obj2;
+
+console.log('DESTRUCTURING OBJECTS');
+console.log(name3, age3);
+
+// However, objects are deconstructured by NAME - not position, like array
+let {name4, greet2} = obj2;
+// let {name4, , greet2} = obj2; <- Cannot be left blank like this
+greet2();
+
+// Giving aliases works to
+let {name5, greet2: yo} = obj2;
+yo();
+
+
 // DESTRUCTURING ARRAYS
 // Quick way of extracting values from array and assign them
 // Can also be used with spread operator
