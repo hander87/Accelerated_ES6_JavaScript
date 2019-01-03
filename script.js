@@ -1,3 +1,21 @@
+// REST OPERATOR
+// Solves issue of using unknown number of values
+// "..." = Rest operator
+
+function sumUp(...toAdd) {
+    console.log('toAdd values are now in array', toAdd);
+    let result = 0;
+    for ( let i = 0; i < toAdd.length; i++ ) {
+        result += toAdd[i];
+    }
+    return result;
+}
+console.log(
+    'REST OPERATOR: sumUp',
+    sumUp(100, 20, 10, 14, 5, 5, 5, "string heh") // These nr of values are "unknown"
+)
+
+
 // OBJECT LITERALS
 // Takes values from surrounding values
 let name1 = 'Hannes';
