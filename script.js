@@ -1,3 +1,11 @@
+// DEFAULT VALUES
+function isEqualTo(number = 10, compare = number) {
+    console.log('number', number);
+    console.log('compare', compare);
+    return number == compare;
+}
+console.log( 'Compare fn:', isEqualTo() );
+
 // ARROW FUNCTION AND "THIS"
 // Arrow Function keeps it's original context
 // Traditional functions assigns it to whatever calls it, ie: button-elements
