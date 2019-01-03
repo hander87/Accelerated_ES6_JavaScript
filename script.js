@@ -1,1 +1,3 @@
-console.log('Script ready');
+import { keyValue } from './external';
+
+console.log(keyValue);

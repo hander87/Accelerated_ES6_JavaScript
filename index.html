@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Accelerated ES6 JavaScript</title>
-    <script src="script.js" defer></script>
+    <script src="/node_modules/systemjs/dist/system.js"></script>
 </head>
 <body>
+    <script>
+        System.import('./script.js');
+    </script>
     <h1>Chapter 3 - Modules & Classes</h1>
     <p>Check Console.</p>
     <p><a target="_blank" href="https://www.udemy.com/es6-bootcamp-next-generation-javascript/learn/v4/content">Link</a></p>

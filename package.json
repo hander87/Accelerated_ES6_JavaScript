@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/hander87/Accelerated_ES6_JavaScript#readme",
   "dependencies": {
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "systemjs": "^2.1.1"
   }
 }
