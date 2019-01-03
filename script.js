@@ -22,6 +22,7 @@ let {name5, greet2: yo} = obj2;
 yo();
 
 
+
 // DESTRUCTURING ARRAYS
 // Quick way of extracting values from array and assign them
 // Can also be used with spread operator
@@ -46,6 +47,7 @@ let [a2, ,c2] = numbers2;
 console.log("Blank values: ", a2 ,c2)
 
 
+
 // TEMPLATE LITERALS
 // Using Backticks
 let name2 = 'Hannes';
@@ -58,6 +60,7 @@ Goodbye
 console.log('TEMPLATE LITERALS', desc);
 
 
+
 // FOR OF LOOP
 // New in ES6
 // Shorter way of looping
@@ -66,6 +69,7 @@ let testResults = [1.12, 23.3, 2.24];
 for( let result of testResults ) {
     console.log('FOR OF LOOP', result);
 }
+
 
 
 // SPREAD OPERATOR
@@ -77,6 +81,7 @@ console.log( '...numbers', ...numbers )
 
 console.log('Math.max(...numbers)', Math.max(...numbers));
 console.log('Math.max(numbers)', Math.max(numbers));
+
 
 
 // REST OPERATOR
@@ -95,6 +100,7 @@ console.log(
     'REST OPERATOR: sumUp',
     sumUp(100, 20, 10, 14, 5, 5, 5, "string heh") // These nr of values are "unknown"
 )
+
 
 
 // OBJECT LITERALS
@@ -121,6 +127,7 @@ obj["greet me"]();
 console.log('Object literals:', obj, obj[assignKey])
 
 
+
 // DEFAULT VALUES
 function isEqualTo(number = 10, compare = number) {
     console.log('number', number);
@@ -128,6 +135,7 @@ function isEqualTo(number = 10, compare = number) {
     return number == compare;
 }
 console.log( 'Compare fn:', isEqualTo() );
+
 
 
 // ARROW FUNCTION AND "THIS"
@@ -159,6 +167,7 @@ console.log('Arrow function:', arrowFunction(5))
 setTimeout( () => console.log('Hello from timeout fn!'), 1000 )
 
 
+
 // HOISTNING
 // Declare before use
 function setValue () {
@@ -181,6 +190,7 @@ const OBJ = {
 console.log(OBJ)
 OBJ.age = 27
 console.log(OBJ)
+
 
 
 // LET
