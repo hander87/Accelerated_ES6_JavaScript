@@ -1,3 +1,27 @@
+// DESTRUCTURING ARRAYS
+// Quick way of extracting values from array and assign them
+// Can also be used with spread operator
+// And have default values
+let numbers2 = [ 1,2,3,4 ];
+let [ a = "Default", b, ...c ] = numbers2;
+
+console.log('DESTRUCTURING ARRAYS');
+console.log('a is ' + a);
+console.log('b is ' + b);
+console.log('c is a new array: ' + c);
+
+// Can also easily swap values
+let a1 = 5;
+let b1 = 10;
+console.log("Before values: " + a1,b1);
+[a1,b1] = [b1,a1];
+console.log("Swapped values: " + a1,b1);
+
+// Can also pull "blank" values
+let [a2, ,c2] = numbers2;
+console.log("Blank values: ", a2 ,c2)
+
+
 // TEMPLATE LITERALS
 // Using Backticks
 let name2 = 'Hannes';
