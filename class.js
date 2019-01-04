@@ -1,5 +1,16 @@
 console.log('::CLASS STRUCTURE::');
 
+class Helper {
+    static logTwice(message) {
+        console.log('Log twice:');
+        console.log(message);
+        console.log(message);
+    }
+}
+
+// let helper = new Helper(); // Instanciation is Not needed when the method is "static"
+Helper.logTwice('Logged');
+
 class Person {
     constructor(name) {
         this.name = name;
@@ -27,4 +38,4 @@ class Hannes extends Person {
 let hannes = new Hannes(31);
 hannes.greetTwice();
 
-// console.log( 'What prototype? ', person.__proto__ === Person.prototype);
+console.log( 'What prototype? ', hannes.__proto__ === Hannes.prototype);
