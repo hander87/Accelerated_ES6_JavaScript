@@ -3,6 +3,7 @@ import { keyValue as key, test } from './external.js'; // .js is only required b
 import * as imported from './external.js'; // .js is only required by systemjs
 import a from './external.js'; // Export "default" only has one key value. Can be named to ANYTHING
 
+console.log('::MODULAR STRUCTURE::');
 console.log(imported); // * wrapps all exported elements into an OBJECT
 
 console.log(key);
