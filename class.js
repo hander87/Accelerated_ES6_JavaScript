@@ -1,3 +1,20 @@
+console.log('::SUBCLASSING - EXTENDING BUILT-IN OBJECTS::');
+
+class ConvertableArray extends Array { // Array = Built in JS Parent Class
+    convert() {
+        let returnArray = [];
+        this.forEach( value => returnArray.push('Converted!' + value) ) // Built-in method in Array class
+        return returnArray;
+    }
+}
+
+let numberArray = new ConvertableArray();
+numberArray.push(1);
+numberArray.push(2);
+numberArray.push(3);
+console.log(numberArray);
+console.log(numberArray.convert());
+
 console.log('::CLASS STRUCTURE::');
 
 class Helper {
