@@ -13,3 +13,5 @@ class Person {
 let person = new Person('Hannes');
 
 person.greet();
+
+console.log( 'What prototype? ', person.__proto__ === Person.prototype);
