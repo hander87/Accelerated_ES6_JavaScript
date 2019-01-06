@@ -1,3 +1,34 @@
+console.log('::ACCESSING ITERATOR::');
+let array2 = [1, 2, 3];
+
+// Changing the metadata with symbols/meta-programming
+// Accessing the iterator behaviour on its next() function
+array2[Symbol.iterator] = function() {
+    let nextValue = 10;
+
+    return {
+        next: function() {
+            nextValue++;
+            return { // Overide the default values for done/value
+                done: nextValue > 15 ? true : false,
+                value: nextValue
+            };
+        }
+    };
+}
+for (let element of array2) {
+    console.log(element);
+}
+
+console.log('nexts:')
+let it2 = array2[Symbol.iterator](); 
+console.log(it2.next()); 
+console.log(it2.next()); 
+console.log(it2.next()); 
+console.log(it2.next()); 
+
+
+
 console.log('::ITERATOR SYMBOL::');
 let array = [1, 2, 3];
 
