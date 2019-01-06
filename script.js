@@ -1,3 +1,19 @@
+console.log('::GENERATORS::');
+// Generator is a function but with a star/asterics
+function *select() {
+    // Generator require yield keyword. Works like "return"
+    yield 'House';
+    yield 'Garage';
+}
+// *select() returns a iterator < Can be accessed with next()
+let it3 = select();
+console.log(it3);
+console.log(it3.next());
+console.log(it3.next());
+console.log(it3.next());
+
+
+
 console.log('::CUSTOM ITERABLE OBJECT::');
 // Making a custom iterable from scratch
 let person = {
