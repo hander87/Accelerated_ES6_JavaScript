@@ -1,3 +1,26 @@
+console.log('::TRY/CATCH/THROW/RETURN ERROR::');
+// Using try and catch for managing errors - So the loop can keep going
+function *gen3(end) {
+    for (let i = 0; i < end; i++) {
+        try {
+            yield i;
+        } catch(error) {
+            console.log('The error:', error)
+        }
+    }
+}
+let it5 = gen3(3);
+console.log(it5.next());
+console.log(it5.throw('An error, which is nice')); // Throw method for errors
+// .return =  Returns custom value inside "value" (Note: check browser compatibility)
+console.log(it5.return('An error, which is nice')); // Returns custom value inside "value" (Note: check browser)
+console.log(it5.next());
+console.log(it5.next());
+console.log(it5.next());
+
+
+
+
 console.log('::WRITING A DYNAMIC GENERATOR ITERATOR::');
 let obj = {
     [Symbol.iterator] : gen
