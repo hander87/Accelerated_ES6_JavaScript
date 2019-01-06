@@ -1,5 +1,7 @@
 console.log('::WELL KNOWNED SYMBOLS::');
 // Well knowned Symbols
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#Well-known_symbols
+
 console.log(':primitiveTypes:')
 let numbers = [1, 2, 3];
 
