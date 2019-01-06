@@ -1,3 +1,30 @@
+console.log('::WRITING A DYNAMIC GENERATOR ITERATOR::');
+let obj = {
+    [Symbol.iterator] : gen
+}
+function *gen() {
+    yield 1;
+    yield 2;
+}
+
+for (const element of obj) {
+    console.log(element);
+}
+
+// Passing values and looping inside generator function
+function *gen2(end) {
+    for (let i = 0; i < end; i++) {
+        yield i;
+    }
+}
+let it4 = gen2(2);
+console.log(it4.next());
+console.log(it4.next());
+console.log(it4.next());
+console.log(it4.next());
+
+
+
 console.log('::GENERATORS::');
 // Generator is a function but with a star/asterics
 function *select() {
