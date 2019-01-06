@@ -1,4 +1,15 @@
 console.log('::WELL KNOWNED SYMBOLS::');
+// Well knowned Symbols
+console.log(':primitiveTypes:')
+let numbers = [1, 2, 3];
+
+// Used to override default behaviour
+numbers[Symbol.toPrimitive] = function() { // Symbol.toPrimitve makes a Unique ID
+    return 999;
+} 
+
+console.log(numbers, +1)
+
 
 console.log(':toStringTag:')
 class PersonA {
