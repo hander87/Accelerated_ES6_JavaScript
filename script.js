@@ -1,3 +1,29 @@
+console.log('::CUSTOM ITERABLE OBJECT::');
+// Making a custom iterable from scratch
+let person = {
+    name: 'Hannes',
+    hobbies: ['Sports', 'Cooking'],
+    [Symbol.iterator]: function() {
+        let i = 0;
+        let hobbies = this.hobbies;
+        return {
+            next: function() {
+                let value = hobbies[i];
+                i++;
+                return {
+                    done: i > hobbies.length ? true : false, // Important to avoid infinite loops
+                    value: value
+                };
+            }
+        };
+    }
+}
+for (const hobby of person) {
+    console.log(hobby);
+}
+
+
+
 console.log('::ACCESSING ITERATOR::');
 let array2 = [1, 2, 3];
 
@@ -26,6 +52,7 @@ console.log(it2.next());
 console.log(it2.next()); 
 console.log(it2.next()); 
 console.log(it2.next()); 
+
 
 
 
