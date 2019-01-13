@@ -1,3 +1,19 @@
+console.log('"MATH" METHOD OBJECTS');
+
+let number = -1;
+// Checks positive or negatives (the minus/plus "sign") 
+// Can also pass 0 or NaN
+console.log('sign', Math.sign(number));
+
+
+let number2 = -3.78;
+// Truncates and return all before decimal place
+console.log('trunc', Math.trunc(number2));
+// Floor returns NEAREST number
+console.log('floor', Math.floor(number2));
+
+
+
 console.log('"OBJECT" OBJECT');
 // Merge two objects
 
