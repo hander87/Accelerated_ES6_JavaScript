@@ -1,3 +1,14 @@
+console.log('"NUMBER" OBJECT');
+let number1 = NaN;
+let number3 = 100000000000;
+
+console.log('Number.isNaN', Number.isNaN(number1)); // Checks if nan
+console.log('Number.isFinite', Number.isFinite(number3)); // Checks if number is not infinite
+console.log('Number.isInteger', Number.isInteger(number3)); // Checks if number is a number
+
+
+
+
 console.log('"STRINGS" OBJECT');
 let name = 'Hannes';
 
