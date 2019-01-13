@@ -1,3 +1,14 @@
+console.log('"STRINGS" OBJECT');
+let name = 'Hannes';
+
+// Checks string with string (case sensitive)
+console.log('startsWith', name.startsWith('Han'));
+console.log('endsWith', name.endsWith('es'));
+console.log('includes', name.includes('nn'));
+
+
+
+
 console.log('"MATH" METHOD OBJECTS');
 
 let number = -1;
@@ -11,6 +22,7 @@ let number2 = -3.78;
 console.log('trunc', Math.trunc(number2));
 // Floor returns NEAREST number
 console.log('floor', Math.floor(number2));
+
 
 
 
