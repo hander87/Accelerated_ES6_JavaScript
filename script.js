@@ -1,5 +1,18 @@
 console.log('"ARRAY" OBJECT');
 
+let array6 = ['apple', 'pear', 'lemon'];
+let iterator = array6.entries(); // Extracts the Entries of array, and displays position and value
+
+for (let el of iterator) { // produces iterator
+    console.log(el);
+}
+
+
+let array5 = [1, 2, 3];
+console.log('array5.copyWithin', array5.copyWithin(1, 2)); // copies within array and paste at positions
+console.log('array5.copyWithin', array5.copyWithin(1, 0, 2)); // Copies untill "End" operator
+
+
 var inventory = [
     {name: 'apples', quantity: 2},
     {name: 'bananas', quantity: 0},
@@ -8,21 +21,26 @@ var inventory = [
 function findCherries(fruit) { 
     return fruit.name === 'cherries';
 }
-console.log('inventory.find', inventory.find(isCherries)); // Find in OBJECT
+console.log('inventory.find', inventory.find(findCherries)); // Find in OBJECT
+
 
 let array4 = [1,2,3,4,5];
 console.log('array4.find', array4.find( val => val >= 3)); // Finds val greater/equal than 3 - then STOP
+
 
 let array3 = [1,2,3,4,5];
 array3.fill(100, 1, 2); // 1, 2 ar optional parameters. Start and End placement
 console.log('array3.fill', array3); // Fills old array with new value
 
+
 let array2 = [1,2,3,4,5];
 let newArray = Array.from(array2, val => val * 2); // Run function of each array value
 console.log('Array.from', newArray)
 
+
 let array1 = Array.of(1,2,3,4,5);
 console.log('Array.of(5)', array1); // Produces array with the values
+
 
 let array = Array(5);
 console.log('Array(5)', array); // Produces 5 undefined array objects
