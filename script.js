@@ -1,5 +1,18 @@
 console.log('"ARRAY" OBJECT');
 
+var inventory = [
+    {name: 'apples', quantity: 2},
+    {name: 'bananas', quantity: 0},
+    {name: 'cherries', quantity: 5}
+];
+function findCherries(fruit) { 
+    return fruit.name === 'cherries';
+}
+console.log('inventory.find', inventory.find(isCherries)); // Find in OBJECT
+
+let array4 = [1,2,3,4,5];
+console.log('array4.find', array4.find( val => val >= 3)); // Finds val greater/equal than 3 - then STOP
+
 let array3 = [1,2,3,4,5];
 array3.fill(100, 1, 2); // 1, 2 ar optional parameters. Start and End placement
 console.log('array3.fill', array3); // Fills old array with new value
