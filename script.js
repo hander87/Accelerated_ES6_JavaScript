@@ -1,1 +1,14 @@
-console.log('Script running...')
+console.log('"OBJECT" OBJECT');
+// Merge two objects
+
+let obj1 = {
+    a: 1
+}
+
+let obj2 = {
+    b: 2
+}
+
+let obj = Object.assign(obj1, obj2);
+
+console.log('obj', obj);
