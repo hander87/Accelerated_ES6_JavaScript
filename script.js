@@ -1,3 +1,36 @@
+console.log('ALL/RACE PROMISE METHOD');
+
+let promise3 = new Promise(  (res, rej)=>{
+    setTimeout( () => {
+        res('Resolved!');
+    }, 500)
+});
+
+let promise4 = new Promise(  (res, rej)=>{
+    setTimeout( () => {
+        rej('Rejected!');
+        // res('Resolved!');
+    }, 1000)
+});
+
+// All promises gets "combined"
+// As long as ONE val gets rejected, no resolves gets passed -  Only the reject.
+
+// Promise.all([ promise3, promise4 ])
+
+// .race completes the FIRST call to get finished.
+Promise.race([ promise3, promise4 ])
+    .then( (success) => {
+        console.log( 'success', success)
+    })
+    .catch( (error) => {
+        console.log('error', error)
+    });
+
+
+
+
+
 function waitASec(seconds) {
     return new Promise( (resolve, reject) => {
         if(seconds > 2) {
@@ -6,7 +39,7 @@ function waitASec(seconds) {
             setTimeout( () => {
                 seconds++;
                 resolve(seconds);
-            }, 1000)
+            }, 3000)
         }
     });
 }
@@ -29,7 +62,7 @@ waitASec(3)
 let promise2 = new Promise((resolve, reject) => {
     setTimeout( () => {
         reject('Promise Failed!');
-    }, 1500);
+    }, 3500);
 });
 
 promise2.then( (value) => {
@@ -47,7 +80,7 @@ let promise = new Promise((resolve, reject) => {
     setTimeout( () => {
         console.log('PROMISE SUCCEED');
         resolve('Promise Succeed!');
-    }, 1500);
+    }, 3500);
 });
 
 promise.then( (value) => {
