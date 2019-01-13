@@ -16,10 +16,10 @@ let promise4 = new Promise(  (res, rej)=>{
 // All promises gets "combined"
 // As long as ONE val gets rejected, no resolves gets passed -  Only the reject.
 
-// Promise.all([ promise3, promise4 ])
-
 // .race completes the FIRST call to get finished.
-Promise.race([ promise3, promise4 ])
+// Promise.race([ promise3, promise4 ])
+
+Promise.all([ promise3, promise4 ])
     .then( (success) => {
         console.log( 'success', success)
     })
