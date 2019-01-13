@@ -1,18 +1,26 @@
 function waitASec(seconds) {
     return new Promise( (resolve, reject) => {
-        setTimeout( () => {
-            seconds++;
-            resolve(seconds);
-        }, 1000)
+        if(seconds > 2) {
+            reject(seconds);
+        } else {
+            setTimeout( () => {
+                seconds++;
+                resolve(seconds);
+            }, 1000)
+        }
     });
 }
 
 // Second gets passed for each .then
-waitASec(0)
+waitASec(3)
     .then(waitASec)
     .then( (seconds) => {
         console.log('CHAINING PROMISES');
         console.log('seconds', seconds);
+    })
+    .catch( (error) => {
+        console.log('CATCHING ERRORS');
+        console.log(error)
     });
 
 
