@@ -1,3 +1,23 @@
+console.log('WEAKMAP()');
+
+let cardAce1 = {
+    name: 'Ace of Spades'
+};
+let cardKing1 = {
+    name: 'King of Hearts'
+};
+
+let key1 = { a:1 };
+let key2 = { b:2 };
+
+let deck1 = new WeakMap(); // Uses Objects as keys
+deck1.set(key1, cardAce1); // Set key to an object. Extract with .get
+deck1.set(key2, cardKing1);
+
+console.log('deck', deck1.get(key1));
+
+
+
 console.log('MAP() - Get:ers and Set:ers');
 
 let cardAce = {
