@@ -1,3 +1,14 @@
+console.log('SET()');
+// Set only holds ONE unique value. Duplicates gets omitted.
+
+let set = new Set([1,2,1,2]);
+
+for (const item of set) {
+    console.log(item);
+}
+
+
+
 console.log('WEAKMAP()');
 
 let cardAce1 = {
