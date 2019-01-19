@@ -3,6 +3,8 @@ console.log('SET()');
 
 let set = new Set([1,2,1,2]);
 
+set.add(3); // Adds values with .add()
+
 for (const item of set) {
     console.log(item);
 }
