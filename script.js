@@ -1,3 +1,24 @@
+console.log('WEAKSET()');
+// WeakSet only uses objects
+
+// let set1 = new WeakSet([ {a:1}, {b:2}, {b:2} ]); 
+// Won't work - these creates new places in memory. Only setted objects allowed.
+
+let obj1 = { a:1 };
+let obj2 = { b:2 };
+
+let set1 = new WeakSet([ obj1, obj2, obj2 ]); 
+
+// also has .add, .delete and has
+set1.delete(obj1);
+set1.add(obj1);
+
+console.log( set1.has(obj1) );
+
+
+
+
+
 console.log('SET()');
 // Set only holds ONE unique value. Duplicates gets omitted.
 
