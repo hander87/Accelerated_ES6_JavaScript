@@ -8,9 +8,14 @@ set.add(3); // Adds values with .add()
 set.delete(1); // Deletes the value (even though you have "duplicates")
 console.log( set.has(1) ); // instead of "get"
 
+for (const item of set.entries()) { // This provides the "key"/position value
+    console.log(item);
+}
+
 for (const item of set) {
     console.log(item);
 }
+
 
 
 
